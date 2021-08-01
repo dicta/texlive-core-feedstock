@@ -56,6 +56,11 @@ rm -rf ${SHARE_DIR}/info
 rm -rf ${SHARE_DIR}/texmf-dist/scripts
 cp -r  texmf/texmf-dist/scripts ${SHARE_DIR}/texmf-dist/scripts
 
+# Patch tlmgr script to use the correct variable when searching for perl modules
+sed \
+    -e 's|Master = `kpsewhich -var-value=SELFAUTOPARENT`|Master = `kpsewhich -var-value=TEXMFROOT`|' \
+    <texmf/texmf-dist/scripts/texlive/tlmgr.pl > ${SHARE_DIR}/texmf-dist/scripts/texlive/tlmgr.pl
+
 mv ${SHARE_DIR}/texmf-dist/web2c/texmf.cnf tmp.cnf
 sed \
     -e "s|TEXMFROOT =.*|TEXMFROOT = \$SELFAUTODIR/share/texlive|" \
