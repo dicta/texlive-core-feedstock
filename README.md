@@ -1,5 +1,5 @@
-About texlive-core
-==================
+About texlive-split
+===================
 
 Home: https://www.tug.org/texlive/
 
@@ -68,20 +68,24 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-texlive--core-green.svg)](https://anaconda.org/conda-forge/texlive-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/texlive-core.svg)](https://anaconda.org/conda-forge/texlive-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/texlive-core.svg)](https://anaconda.org/conda-forge/texlive-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/texlive-core.svg)](https://anaconda.org/conda-forge/texlive-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-texlive--fonts-green.svg)](https://anaconda.org/conda-forge/texlive-fonts) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/texlive-fonts.svg)](https://anaconda.org/conda-forge/texlive-fonts) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/texlive-fonts.svg)](https://anaconda.org/conda-forge/texlive-fonts) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/texlive-fonts.svg)](https://anaconda.org/conda-forge/texlive-fonts) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-texlive--split-green.svg)](https://anaconda.org/conda-forge/texlive-split) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/texlive-split.svg)](https://anaconda.org/conda-forge/texlive-split) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/texlive-split.svg)](https://anaconda.org/conda-forge/texlive-split) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/texlive-split.svg)](https://anaconda.org/conda-forge/texlive-split) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-texlive--texmf-green.svg)](https://anaconda.org/conda-forge/texlive-texmf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/texlive-texmf.svg)](https://anaconda.org/conda-forge/texlive-texmf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/texlive-texmf.svg)](https://anaconda.org/conda-forge/texlive-texmf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/texlive-texmf.svg)](https://anaconda.org/conda-forge/texlive-texmf) |
 
-Installing texlive-core
-=======================
+Installing texlive-split
+========================
 
-Installing `texlive-core` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `texlive-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `texlive-core` can be installed with:
+Once the `conda-forge` channel has been enabled, `texlive-core, texlive-fonts, texlive-split, texlive-texmf` can be installed with:
 
 ```
-conda install texlive-core
+conda install texlive-core texlive-fonts texlive-split texlive-texmf
 ```
 
 It is possible to list all of the versions of `texlive-core` available on your platform with:
@@ -129,17 +133,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating texlive-core-feedstock
-===============================
+Updating texlive-split-feedstock
+================================
 
-If you would like to improve the texlive-core recipe or build a new
+If you would like to improve the texlive-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/texlive-core-feedstock are
+Note that all branches in the conda-forge/texlive-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
