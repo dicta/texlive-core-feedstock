@@ -24,9 +24,11 @@ SHARE_DIR=${PREFIX}/share/texlive
 [[ -d "${SHARE_DIR}/texmf-dist/scripts/texlive" ]] || mkdir -p "${SHARE_DIR}/texmf-dist/scripts/texlive"
 
 # Copy perl module from the extras tarball. This specific directory is selected
-# so that it is in the Perl search path of texlive tools
+# so that it is in the Perl search path of texlive tools. Also include the database
+# file that is required for the 'tlmgr' script to work.
 [[ -d "${SHARE_DIR}/tlpkg" ]] || mkdir -p "${SHARE_DIR}/tlpkg"
-cp -vr extra/tlpkg/TeXLive ${SHARE_DIR}/tlpkg/TeXLive
+cp -r extra/tlpkg/TeXLive ${SHARE_DIR}/tlpkg/TeXLive
+cp -r extra/tlpkg/texlive.tlpdb ${SHARE_DIR}/tlpkg
 
 pushd forgebuild
   # make check reads files from the installation prefix:
